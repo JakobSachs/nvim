@@ -3,10 +3,8 @@ local lsp = require('lsp-zero')
 lsp.preset('recommended')
 
 
-
-
 -- remap default vim movements to fallback to lsp
-lsp.on_attach(function(client, bufnr)
+lsp.on_attach(function(_, bufnr)
     local opts = { buffer = bufnr, remap = false }
 
     vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_references<cr>', { buffer = true })
@@ -35,11 +33,20 @@ lsp.set_sign_icons({
     info = '»'
 })
 
+require('lspconfig').lua_ls.setup { lsp.nvim_lua_ls() }
+require 'lspconfig'.typst_lsp.setup {
+    settings = {
+        exportPdf = "onType" -- Choose onType, onSave or never.
+    }
+}
+
+
+
 lsp.setup()
 
 -- You need to setup `cmp` after lsp-zero
 local cmp = require('cmp')
-local cmp_action = require('lsp-zero').cmp_action()
+local _ = require('lsp-zero').cmp_action()
 
 cmp.setup({
     mapping = {
@@ -48,5 +55,22 @@ cmp.setup({
 
         -- Ctrl+Space to trigger completion menu
         ['<C-Space>'] = cmp.mapping.complete(),
+    },
+    sources = {
+        {
+            name = 'path'
+        },
+        {
+            name = 'buffer'
+        },
+        {
+            name = 'nvim_lsp'
+        },
     }
 })
+
+-- tressitter context
+require('treesitter-context').setup {
+    line_numbers = false,
+    separator = '=',
+}

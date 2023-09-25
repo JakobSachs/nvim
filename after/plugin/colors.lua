@@ -3,8 +3,8 @@ local pywal = require('pywal')
 pywal.setup()
 
 function GetColorScheme(color)
-    color = "pywal"
-    -- color = "aurora"
+    -- color = "pywal"
+    color = "rose-pine-moon"
     vim.cmd.colorscheme(color)
 
     -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
