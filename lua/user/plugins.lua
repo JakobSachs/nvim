@@ -52,12 +52,6 @@ return require('packer').startup(function(use)
     -- lsp inlay hints
     use('simrat39/inlay-hints.nvim')
 
-
-    -- Copilot
-    use {
-        "zbirenbaum/copilot.lua",
-    }
-
     -- autopairs
     use {
         "windwp/nvim-autopairs",
