@@ -71,9 +71,24 @@ return require('packer').startup(function(use)
 
     use 'nvim-treesitter/nvim-treesitter-context'
 
+
     -- Copilot
     use {
         "zbirenbaum/copilot.lua",
+        config = function()
+            require("copilot").setup({
+                suggestion = { enabled = false },
+                panel = { enabled = false },
+            })
+        end
+    }
+
+    use {
+        "zbirenbaum/copilot-cmp",
+        after = { "copilot.lua" },
+        config = function()
+            require("copilot_cmp").setup()
+        end
     }
 
     use { 'kaarmu/typst.vim', ft = { 'typst' } }
