@@ -40,9 +40,6 @@ return require('packer').startup(function(use)
 
     use "hrsh7th/cmp-path"
 
-    -- Typst lsp
-    use { 'kaarmu/typst.vim', ft = { 'typst' } }
-
     -- status line
     use {
         'nvim-lualine/lualine.nvim',
@@ -61,14 +58,8 @@ return require('packer').startup(function(use)
     -- wakatime
     use 'wakatime/vim-wakatime'
 
-    -- For nice responsive colors
-    use { 'AlphaTechnolog/pywal.nvim', as = 'pywal' }
-
-    -- Alternative colorschemes
+    --  colorschemes
     use({ 'rose-pine/neovim', as = 'rose-pine' })
-
-    -- Startuptime benchmarking
-    use 'dstein64/vim-startuptime'
 
     -- dimn inactive windows via tint
     use 'levouh/tint.nvim'
@@ -79,4 +70,11 @@ return require('packer').startup(function(use)
     }
 
     use 'nvim-treesitter/nvim-treesitter-context'
+
+    -- Copilot
+    use {
+        "zbirenbaum/copilot.lua",
+    }
+
+    use { 'kaarmu/typst.vim', ft = { 'typst' } }
 end)

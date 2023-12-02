@@ -26,6 +26,8 @@ lsp.on_attach(function(_, bufnr)
     lsp.buffer_autoformat()
 end)
 
+
+
 lsp.set_sign_icons({
     error = '✘',
     warn = '▲',
@@ -33,16 +35,11 @@ lsp.set_sign_icons({
     info = '»'
 })
 
-require('lspconfig').lua_ls.setup { lsp.nvim_lua_ls() }
-require 'lspconfig'.typst_lsp.setup {
-    settings = {
-        exportPdf = "onType" -- Choose onType, onSave or never.
-    }
-}
-
-
-
 lsp.setup()
+
+
+require('lspconfig').lua_ls.setup { lsp.nvim_lua_ls() }
+
 
 -- You need to setup `cmp` after lsp-zero
 local cmp = require('cmp')
