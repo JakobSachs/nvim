@@ -1,5 +1,6 @@
 local lsp = require('lsp-zero')
 
+
 lsp.preset('recommended')
 
 
@@ -36,7 +37,6 @@ lsp.set_sign_icons({
 })
 
 lsp.setup()
-
 
 require('lspconfig').lua_ls.setup { lsp.nvim_lua_ls() }
 

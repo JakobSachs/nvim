@@ -46,9 +46,6 @@ return require('packer').startup(function(use)
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
 
-    -- lsp inlay hints
-    use('simrat39/inlay-hints.nvim')
-
     -- autopairs
     use {
         "windwp/nvim-autopairs",
