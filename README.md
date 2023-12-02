@@ -42,9 +42,6 @@ for autocompletion.
 - **[Lualine](https://github.com/nvim-lualine/lualine.nvim)**: Customizable 
 status line, with optional web devicons.
 
-- **[Inlay Hints](https://github.com/simrat39/inlay-hints.nvim)**: Inline code 
-hints.
-
 - **[Nvim-Autopairs](https://github.com/windwp/nvim-autopairs)**: Auto-closing 
 of brackets and quotes.
 - **[Wakatime](https://github.com/wakatime/vim-wakatime)**: Coding activity 
