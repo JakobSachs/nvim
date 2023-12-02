@@ -1,6 +1,7 @@
 function GetColorScheme(color)
     -- color = "pywal"
-    color = "rose-pine-moon"
+    -- color = "rose-pine-moon"
+    color = "nvimgelion"
     vim.cmd.colorscheme(color)
 
     -- Uncomment for transparent background

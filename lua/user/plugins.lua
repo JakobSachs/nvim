@@ -60,6 +60,7 @@ return require('packer').startup(function(use)
 
     --  colorschemes
     use({ 'rose-pine/neovim', as = 'rose-pine' })
+    use({ 'nyngwang/nvimgelion' })
 
     -- dimn inactive windows via tint
     use 'levouh/tint.nvim'
