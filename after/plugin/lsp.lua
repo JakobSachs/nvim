@@ -38,8 +38,18 @@ lsp.set_sign_icons({
 
 lsp.setup()
 
-require('lspconfig').lua_ls.setup { lsp.nvim_lua_ls() }
+-- Lua language server
+require('lspconfig').lua_ls.setup {
+    lsp.nvim_lua_ls()
+}
 
+
+require 'lspconfig'.typst_lsp.setup {
+    settings = {
+        exportPdf = "onType" -- Choose onType, onSave or never.
+        -- serverPath = "" -- Normally, there is no need to uncomment it.
+    }
+}
 
 -- You need to setup `cmp` after lsp-zero
 local cmp = require('cmp')

@@ -89,5 +89,8 @@ return require('packer').startup(function(use)
         end
     }
 
-    use { 'kaarmu/typst.vim', ft = { 'typst' } }
+    use {
+        'theHamsta/nvim-treesitter-pairs',
+        requires = { 'nvim-treesitter/nvim-treesitter' },
+    }
 end)
