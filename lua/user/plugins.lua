@@ -58,6 +58,7 @@ return require('packer').startup(function(use)
     --  colorschemes
     use({ 'rose-pine/neovim', as = 'rose-pine' })
     use({ 'nyngwang/nvimgelion' })
+    use { "ellisonleao/gruvbox.nvim" }
 
     -- dimn inactive windows via tint
     use 'levouh/tint.nvim'
@@ -93,4 +94,6 @@ return require('packer').startup(function(use)
         'theHamsta/nvim-treesitter-pairs',
         requires = { 'nvim-treesitter/nvim-treesitter' },
     }
+
+    use { 'kaarmu/typst.vim', ft = { 'typst' } }
 end)
