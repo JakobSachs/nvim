@@ -51,6 +51,8 @@ require 'lspconfig'.typst_lsp.setup {
     }
 }
 
+require('lspconfig').jdtls.setup({})
+
 -- You need to setup `cmp` after lsp-zero
 local cmp = require('cmp')
 local _ = require('lsp-zero').cmp_action()

@@ -18,18 +18,19 @@ return require('packer').startup(function(use)
     use(
         'nvim-treesitter/nvim-treesitter',
         { run = ":TSUpdate" }
-
     )
 
+
     -- LSP
+    use { 'williamboman/mason.nvim',
+    }
+    use { 'williamboman/mason-lspconfig.nvim' }
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',
         requires = {
             -- LSP Support
-            { 'neovim/nvim-lspconfig' },             -- Required
-            { 'williamboman/mason.nvim' },           -- Optional
-            { 'williamboman/mason-lspconfig.nvim' }, -- Optional
+            { 'neovim/nvim-lspconfig' }, -- Required
 
             -- Autocompletion
             { 'hrsh7th/nvim-cmp' },     -- Required
@@ -96,4 +97,8 @@ return require('packer').startup(function(use)
     }
 
     use { 'kaarmu/typst.vim', ft = { 'typst' } }
+
+    use { 'dstein64/vim-startuptime' }
+
+    use 'mfussenegger/nvim-jdtls'
 end)
