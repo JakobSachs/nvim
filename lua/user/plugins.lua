@@ -101,4 +101,10 @@ return require('packer').startup(function(use)
     use { 'dstein64/vim-startuptime' }
 
     use 'mfussenegger/nvim-jdtls'
+
+    use {
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+        requires = { { "nvim-lua/plenary.nvim" } }
+    }
 end)
