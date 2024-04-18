@@ -100,4 +100,19 @@ return require('packer').startup(function(use)
             require('hardtime').setup()
         end
     }
+
+    use {
+        'JakobSachs/typing-metrics.nvim',
+        -- Example configuration in Lua
+        config = function()
+            require('typing-metrics').setup({
+                -- Default config values
+                word_length = 5,        -- average word length
+                update_interval = 500,  -- sample time in milliseconds
+                average_size = 3,       -- number of samples to keep for average calculation
+                target_wpm = 60,        -- speed to show full bar
+                bar_direction = "vertical", -- or horizontal
+            })
+        end
+    }
 end)
