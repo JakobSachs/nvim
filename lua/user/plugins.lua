@@ -90,6 +90,14 @@ return require('packer').startup(function(use)
     use {
         "ThePrimeagen/harpoon",
         branch = "harpoon2",
-        requires = { { "nvim-lua/plenary.nvim" } }
+        requires = { "nvim-lua/plenary.nvim" }
+    }
+
+    use {
+        'm4xshen/hardtime.nvim',
+        requires = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
+        config = function()
+            require('hardtime').setup()
+        end
     }
 end)
