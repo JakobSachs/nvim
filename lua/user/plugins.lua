@@ -4,9 +4,13 @@ return require('packer').startup(function(use)
     -- Packer line required
     use 'wbthomason/packer.nvim'
 
+
     --
     -- Custom Plugins
     --
+
+    -- tmux integration
+    use { 'christoomey/vim-tmux-navigator' }
 
     -- Telescope for Fuzzyfinding etc.
     use {
@@ -15,11 +19,10 @@ return require('packer').startup(function(use)
     }
 
     -- Treesitter for syntax
-    use(
+    use {
         'nvim-treesitter/nvim-treesitter',
-        { run = ":TSUpdate" }
-    )
-
+        commit = 'f197a15',
+    }
 
     -- LSP
     use { 'williamboman/mason.nvim',
@@ -60,6 +63,8 @@ return require('packer').startup(function(use)
     use({ 'rose-pine/neovim', as = 'rose-pine' })
     use({ 'nyngwang/nvimgelion' })
     use { "ellisonleao/gruvbox.nvim" }
+    use { 'aktersnurra/no-clown-fiesta.nvim' }
+    use { 'orfosys/nvim-nyctophilia' }
 
     -- dimn inactive windows via tint
     use 'levouh/tint.nvim'
@@ -70,26 +75,6 @@ return require('packer').startup(function(use)
     }
 
     use 'nvim-treesitter/nvim-treesitter-context'
-
-
-    -- Copilot
-    use {
-        "zbirenbaum/copilot.lua",
-        config = function()
-            require("copilot").setup({
-                suggestion = { enabled = false },
-                panel = { enabled = false },
-            })
-        end
-    }
-
-    use {
-        "zbirenbaum/copilot-cmp",
-        after = { "copilot.lua" },
-        config = function()
-            require("copilot_cmp").setup()
-        end
-    }
 
     use {
         'theHamsta/nvim-treesitter-pairs',

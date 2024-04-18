@@ -50,9 +50,6 @@ tracking.
 - **[Rose Pine Theme](https://github.com/rose-pine/neovim)**: Soothing color 
 scheme.
 
-- **[Copilot.lua](https://github.com/zbirenbaum/copilot.lua)** 
-and **[copilot-cmp](https://github.com/zbirenbaum/copilot-cmp)**: Copilot integration
-
 - **[Tint](https://github.com/levouh/tint.nvim)**: Dim inactive 
 windows.
 
