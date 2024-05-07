@@ -115,4 +115,6 @@ return require('packer').startup(function(use)
             })
         end
     }
+
+    use { 'smithbm2316/centerpad.nvim' }
 end)

@@ -2,16 +2,16 @@ function GetColorScheme(color)
     -- color = "pywal"
     -- color = "rose-pine-moon"
     -- color = "nvimgelion"
-    -- color = "gruvbox"
+    color = "gruvbox"
     -- color = "no-clown-fiesta"
-    -- color = "umbra"
-    color = "habamax"
+    --color = "umbra"
+    --color = "habamax"
     vim.cmd.colorscheme(color)
 
     -- Uncomment for transparent background
-    -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-    -- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-    -- vim.api.nvim_set_hl(0, "LineNr", { bg = "none" })
+    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+    vim.api.nvim_set_hl(0, "LineNr", { bg = "none" })
 end
 
 GetColorScheme()
